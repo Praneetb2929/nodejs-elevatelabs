@@ -1,53 +1,75 @@
-# 📦 Sample Node.js Application with Docker Support
+# 🚀 Node.js App with Docker + CI/CD via GitHub Actions
 
-This repository contains a Node.js application packaged with Docker and managed via Docker Compose. It allows you to run the application in a containerized environment for easy setup and deployment.
+This repository contains a sample **Node.js web application** containerized with **Docker** and deployed through a **CI/CD pipeline using GitHub Actions**. The purpose is to automate testing, building, and Docker image deployment to DockerHub on every push to the `main` branch.
+
+---
 
 ## 📁 Project Structure
-```
-├── app
-│ ├── public
-│ │ └── styles
-│ │     └── styles.css
+
+sample-node-project/
+├── app/
+│ ├── public/
+│ │ └── styles/
+│ │ └── styles.css
 │ ├── routes.js
-│ └── server
-│     └── views
-│         └── index.ejs
+│ └── server/
+│ └── views/
+│ └── index.ejs
 ├── app.js
-├── docker-compose.yml
-├── Dockerfile
-├── package-lock.json
 ├── package.json
+├── package-lock.json
+├── Dockerfile
+├── docker-compose.yml
+├── .dockerignore
+├── .gitignore
+├── .github/
+│ └── workflows/
+│ └── main.yaml
 └── README.md
-```
 
+---
 
-## 🚀 Getting Started
+## ⚙️ What I Did
 
-These instructions will get your application up and running using Docker.
+1. **Created a Node.js web app** using Express with EJS views and static files.
+2. **Wrote a `Dockerfile`** to containerize the app using Node.js 24-alpine.
+3. **Used a non-root user** inside the Docker image for better security.
+4. **Wrote a GitHub Actions workflow** to:
+   - Automatically run on every push to `main`
+   - Log in to DockerHub using GitHub Secrets
+   - Build and tag the Docker image
+   - Push the image to DockerHub using `github.sha` as the tag
+5. **Pushed the full project** to [GitHub](https://github.com/Praneetb2929/nodejs-elevatelabs)
+6. Verified deployment by checking GitHub Actions logs and DockerHub for the pushed image.
 
-### 🛠️ Prerequisites
+---
 
-Make sure you have the following installed:
+## 🐳 Docker Setup
 
-- [Node.js](https://nodejs.org/) (for local development)
-- [Docker](https://www.docker.com/get-started)
-- [Docker Compose](https://docs.docker.com/compose/)
-
-### 📦 Build and Run with Docker Compose
-
-1. **Clone the repository**:
-
-```bash
-git clone https://github.com/acemilyalcin/sample-node-project.git
-cd sample-node-project
-```
-
-2. **Start application**
+### 🔧 Build & Run Locally (Optional)
 
 ```bash
-docker-compose up --build
+docker build -t nodejs-demo-app .
+docker run -p 3000:3000 nodejs-demo-app
 ```
+🤖 GitHub Actions Workflow
+Located in .github/workflows/main.yaml, this pipeline performs:
 
-3. **Access the application**
+Checkout code
 
-Once the containers are up, you can access the app at: [http://localhost:3000](http://localhost:3000)
+Login to DockerHub
+
+Build Docker image
+
+Push Docker image with commit SHA tag
+
+🔐 GitHub Secrets Used:
+DOCKER_USERNAME
+
+DOCKER_PASSWORD (or Docker Hub access token)
+
+📷 Screenshots
+✅ VS Code Project View
+
+
+✅ GitHub Repository After Push
