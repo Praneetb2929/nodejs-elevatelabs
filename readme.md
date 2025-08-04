@@ -8,23 +8,41 @@ This repository contains a sample **Node.js web application** containerized with
 
 sample-node-project/
 ├── app/
+
 │ ├── public/
+
 │ │ └── styles/
+
 │ │ └── styles.css
+
 │ ├── routes.js
+
 │ └── server/
+
 │ └── views/
+
 │ └── index.ejs
+
 ├── app.js
+
 ├── package.json
+
 ├── package-lock.json
+
 ├── Dockerfile
+
 ├── docker-compose.yml
+
 ├── .dockerignore
+
 ├── .gitignore
+
 ├── .github/
+
 │ └── workflows/
+
 │ └── main.yaml
+
 └── README.md
 
 ---
@@ -52,23 +70,19 @@ sample-node-project/
 docker build -t nodejs-demo-app .
 docker run -p 3000:3000 nodejs-demo-app
 ```
-🤖 GitHub Actions Workflow
+## 🤖 GitHub Actions Workflow
 Located in .github/workflows/main.yaml, this pipeline performs:
 
 Checkout code
-
 Login to DockerHub
-
 Build Docker image
-
 Push Docker image with commit SHA tag
 
-🔐 GitHub Secrets Used:
+## 🔐 GitHub Secrets Used:
 DOCKER_USERNAME
-
 DOCKER_PASSWORD (or Docker Hub access token)
 
-📷 Screenshots
+## 📷 Screenshots
 ✅ VS Code Project View
 
 
