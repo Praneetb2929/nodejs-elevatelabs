@@ -1,4 +1,4 @@
-# 🚀 Node.js App with Docker + CI/CD via GitHub Actions
+# TASK 1 🚀 Node.js App with Docker + CI/CD via GitHub Actions
 
 This repository contains a sample **Node.js web application** containerized with **Docker** and deployed through a **CI/CD pipeline using GitHub Actions**. The purpose is to automate testing, building, and Docker image deployment to DockerHub on every push to the `main` branch.
 
@@ -91,3 +91,58 @@ DOCKER_PASSWORD (or Docker Hub access token)
 
 ✅ Docker Hub
 <img width="1868" height="439" alt="Image" src="https://github.com/user-attachments/assets/e258b69f-b79e-4126-882a-e40b7a7663a0" />
+
+
+# TASK 2   Node.js CI/CD Pipeline with Jenkins & Docker
+This project demonstrates a simple CI/CD pipeline using **Jenkins**, **Docker**, and **GitHub**. It builds a Docker image of a Node.js application and pushes it to **DockerHub** on every commit.
+
+
+## 🚀 Features
+
+- Pull code from GitHub
+- Build Docker image
+- Push Docker image to DockerHub
+- Jenkins Declarative Pipeline
+
+## 🔧 Technologies Used
+
+- Jenkins
+- Docker
+- GitHub
+- Node.js
+
+## 🔐 Prerequisites
+
+- DockerHub account (credentials added in Jenkins as `dockerhub`)
+- Jenkins with Docker installed
+- GitHub repository with Jenkinsfile
+
+## ⚙️ Jenkins Pipeline
+
+The Jenkinsfile contains 4 stages:
+
+1. **Clone Repository** – Pulls the Node.js app from GitHub  
+2. **Build Docker Image** – Builds the image with a tag using the Jenkins build number  
+3. **Login to DockerHub** – Uses Jenkins credentials to login securely  
+4. **Push Docker Image** – Pushes the image to DockerHub  
+
+> 📦 Image Name: `praneetz/nodejs-demo-app`
+
+## 📸 Screenshots
+
+| Stage | Screenshot |
+|-------|------------|
+| Jenkins Dashboard | ![Jenkins Dashboard](screenshots/jenkins-dashboard.png) |
+| Pipeline Build Log | ![Build Log](screenshots/build-log.png) |
+| DockerHub Image | ![DockerHub Repo](screenshots/dockerhub-repo.png) |
+
+## 🪛 How to Use
+
+1. Clone this repository in Jenkins.
+2. Set up credentials with ID `dockerhub`.
+3. Trigger the pipeline.
+4. Check DockerHub for new image tags.
+
+
+
+
