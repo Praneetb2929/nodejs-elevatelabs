@@ -128,17 +128,17 @@ The Jenkinsfile contains 4 stages:
 
 > 📦 Image Name: `praneetz/nodejs-demo-app`
 
-## 📸 Screenshots
+# 📸 Screenshots
 
 
- Jenkins Dashboard 
+## Jenkins Dashboard 
  <img width="1819" height="1069" alt="Image" src="https://github.com/user-attachments/assets/96abce37-d317-4e01-b814-864dba0215e7" />
  
- Pipeline Build Log 
+## Pipeline Build Log 
  <img width="1911" height="1079" alt="Image" src="https://github.com/user-attachments/assets/0931f589-be5e-4814-9e4b-1cf5937e25d0" />
 <img width="1919" height="1029" alt="Image" src="https://github.com/user-attachments/assets/1a41cd8a-b9cd-4942-891c-7ae373f244ab" />
 
- DockerHub Image 
+## DockerHub Image 
 <img width="1904" height="583" alt="Image" src="https://github.com/user-attachments/assets/ff0a7e9c-7309-462c-a8ee-bd315ccf748f" />
 ## 🪛 How to Use
 
