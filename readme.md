@@ -130,11 +130,12 @@ The Jenkinsfile contains 4 stages:
 
 ## 📸 Screenshots
 
-| Stage | Screenshot |
-|-------|------------|
-| Jenkins Dashboard | ![Jenkins Dashboard](screenshots/jenkins-dashboard.png) |
-| Pipeline Build Log | ![Build Log](screenshots/build-log.png) |
-| DockerHub Image | ![DockerHub Repo](screenshots/dockerhub-repo.png) |
+
+ Jenkins Dashboard 
+ 
+ Pipeline Build Log 
+ 
+ DockerHub Image 
 
 ## 🪛 How to Use
 
