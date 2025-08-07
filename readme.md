@@ -179,15 +179,26 @@ The `main.tf` file is configured to:
 
 ## 🧪 Steps to Execute
 ✅ 1. Initialize Terraform
+
 <img width="1362" height="677" alt="Image" src="https://github.com/user-attachments/assets/ca7b0f55-ef99-47bd-9b56-d5f15f2388ce" />
+
 ✅ 2. Preview the plan
+
 <img width="1710" height="799" alt="Image" src="https://github.com/user-attachments/assets/466e4678-020e-4ae2-afd0-e8ac59baaa3d" />
+
 ✅ 2. Apply the plan
+
 <img width="1728" height="765" alt="Image" src="https://github.com/user-attachments/assets/ad6a3b2a-d6e0-4e72-a69c-29ae67eb9b75" />
+
 ✅ 4. Check running container
+
 <img width="1702" height="159" alt="Image" src="https://github.com/user-attachments/assets/8099c63c-cecc-44c0-80bf-5ca236ed7f19" />
+
 ✅ 5. Access the app
+
 <img width="1919" height="1079" alt="Image" src="https://github.com/user-attachments/assets/2cdb93dd-0ec5-4f87-a732-da9d5d7caff9" />
+
 ✅ 6. Destroy Infrastructure
+
 <img width="1685" height="798" alt="Image" src="https://github.com/user-attachments/assets/aef846d6-9666-4900-9b7c-e9b8fc4d53b4" />
 
