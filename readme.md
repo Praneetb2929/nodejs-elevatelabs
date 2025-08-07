@@ -148,5 +148,46 @@ The Jenkinsfile contains 4 stages:
 4. Check DockerHub for new image tags.
 
 
+# 🛠️ Task 3: Infrastructure as Code (IaC) with Terraform
 
+## 📌 Objective
+
+Use **Terraform** to provision a **local Docker container** by building a custom image from a `Dockerfile`.
+
+
+---
+
+## 🚀 Tools Used
+
+- [Terraform](https://www.terraform.io/)
+- [Docker](https://www.docker.com/)
+- VS Code (Optional)
+- Localhost / Terminal
+
+---
+
+## 🔧 Terraform Configuration
+
+The `main.tf` file is configured to:
+
+- Use Docker as the provider
+- Build a custom image using your local `Dockerfile`
+- Create and run a container from the image
+- Map container port `3000` to host port `8080`
+
+<img width="1581" height="1027" alt="Image" src="https://github.com/user-attachments/assets/8d65cc01-029e-4db8-84ac-fbe5080f0dbd" />
+
+## 🧪 Steps to Execute
+✅ 1. Initialize Terraform
+<img width="1710" height="799" alt="Image" src="https://github.com/user-attachments/assets/466e4678-020e-4ae2-afd0-e8ac59baaa3d" />
+✅ 2. Preview the plan
+<img width="1728" height="765" alt="Image" src="https://github.com/user-attachments/assets/ad6a3b2a-d6e0-4e72-a69c-29ae67eb9b75" />
+✅ 2. Preview the plan
+<img width="1702" height="159" alt="Image" src="https://github.com/user-attachments/assets/8099c63c-cecc-44c0-80bf-5ca236ed7f19" />
+✅ 4. Check running container
+<img width="1702" height="159" alt="Image" src="https://github.com/user-attachments/assets/8099c63c-cecc-44c0-80bf-5ca236ed7f19" />
+✅ 5. Access the app
+
+✅ 6. Destroy Infrastructure
+<img width="1685" height="798" alt="Image" src="https://github.com/user-attachments/assets/aef846d6-9666-4900-9b7c-e9b8fc4d53b4" />
 
