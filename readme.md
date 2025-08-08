@@ -202,3 +202,35 @@ The `main.tf` file is configured to:
 
 <img width="1685" height="798" alt="Image" src="https://github.com/user-attachments/assets/aef846d6-9666-4900-9b7c-e9b8fc4d53b4" />
 
+# Task 4 – Version-Controlled DevOps Project with Git
+Overview
+This repository demonstrates Git best practices for managing a DevOps project.
+It follows a clear branching strategy, uses pull requests for collaboration, and maintains a clean commit history with .gitignore rules.
+
+# Git Workflow
+## 1. Initialize Repository
+<img width="1546" height="90" alt="Image" src="https://github.com/user-attachments/assets/c935ee01-3f5b-4c21-a790-051e5682ffac" />
+<img width="1627" height="588" alt="Image" src="https://github.com/user-attachments/assets/46dc7a79-dd1f-4b61-9891-4448d87de337" />
+
+## 2. Branching Strategy
+We use:
+main → Production-ready code
+dev → Development branch
+feature/ → Feature-specific branches
+
+<img width="1101" height="497" alt="Image" src="https://github.com/user-attachments/assets/4126b6f1-7db2-4492-91c9-9a8d4bd33091" />
+<img width="1288" height="382" alt="Image" src="https://github.com/user-attachments/assets/730ad335-22af-4eab-a7bc-4d518f0c509f" />
+
+## 3. Pull Requests
+Push your feature branch to GitHub.
+Open a PR from feature/... → main.
+After testing, open a PR from dev → main.
+
+<img width="1554" height="896" alt="Image" src="https://github.com/user-attachments/assets/9701460a-3d3d-4018-8083-0964b6acf543" />
+
+## 4. Using .gitignore
+Present in the Github Repo
+
+## 5. Tagging Releases
+<img width="1148" height="289" alt="Image" src="https://github.com/user-attachments/assets/6c684493-46eb-4a35-9169-cc7dcb308af9" />
+<img width="574" height="470" alt="Image" src="https://github.com/user-attachments/assets/ad17ac3c-d6e5-4044-913a-094d5c33d305" />
