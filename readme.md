@@ -248,6 +248,7 @@ kubectl get nodes
 <img width="1813" height="974" alt="Image" src="https://github.com/user-attachments/assets/6f880f29-e5b6-4368-b42c-30a912129ada" />
 ## 2. Create Deployment
 File: deployment.yaml
+
 ```bash
 apiVersion: apps/v1
 kind: Deployment
