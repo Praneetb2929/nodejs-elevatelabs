@@ -234,3 +234,88 @@ Present in the Github Repo
 ## 5. Tagging Releases
 <img width="1148" height="289" alt="Image" src="https://github.com/user-attachments/assets/6c684493-46eb-4a35-9169-cc7dcb308af9" />
 <img width="574" height="470" alt="Image" src="https://github.com/user-attachments/assets/ad17ac3c-d6e5-4044-913a-094d5c33d305" />
+
+#  Task 5 – Build a Kubernetes Cluster Locally with Minikube
+Objective: Deploy and manage applications in Kubernetes using Minikube and kubectl.
+
+Steps
+## 1. Start Minikube
+```bash
+minikube start
+kubectl cluster-info
+kubectl get nodes
+```
+<img width="1813" height="974" alt="Image" src="https://github.com/user-attachments/assets/6f880f29-e5b6-4368-b42c-30a912129ada" />
+## 2. Create Deployment
+File: deployment.yaml
+```bash
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+```
+## Apply:
+```bash
+kubectl apply -f deployment.yaml
+kubectl get pods
+```
+<img width="1243" height="547" alt="Image" src="https://github.com/user-attachments/assets/dd793e83-f717-4aa7-bead-6040920433c3" />
+
+## 3. Create Service
+File: service.yaml
+```bash
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-service
+spec:
+  selector:
+    app: my-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
+```
+## Apply:
+```bash
+kubectl apply -f service.yaml
+kubectl get svc
+```
+<img width="1206" height="284" alt="Image" src="https://github.com/user-attachments/assets/8579257d-7da5-4096-90f8-052c5416594f" />
+
+## 4. Access Service
+```bash
+minikube service hello-service
+```
+<img width="1457" height="470" alt="Image" src="https://github.com/user-attachments/assets/51b5d30d-19e4-4e85-8315-8884f80ecd24" />
+<img width="1905" height="797" alt="Image" src="https://github.com/user-attachments/assets/3e6d61c9-b0be-41cc-9f38-46dbe29cbbcd" />
+
+## 5. Scale Deployment
+```bash
+kubectl scale deployment my-app --replicas=4
+kubectl get pods
+```
+<img width="1433" height="545" alt="Image" src="https://github.com/user-attachments/assets/bf026ff4-4258-4e5b-b332-040607189cb7" />
+
+## 6. Describe Pods & View Logs
+```bash
+kubectl describe pod <pod-name>
+kubectl logs <pod-name>
+```
+<img width="1570" height="811" alt="Image" src="https://github.com/user-attachments/assets/94be55f8-e1b6-4d25-813e-cc10b19501e2" />
