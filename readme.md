@@ -320,3 +320,72 @@ kubectl describe pod <pod-name>
 kubectl logs <pod-name>
 ```
 <img width="1570" height="811" alt="Image" src="https://github.com/user-attachments/assets/94be55f8-e1b6-4d25-813e-cc10b19501e2" />
+
+
+# Task 6: Host a Static Website with GitHub Pages
+
+This task demonstrates how I deployed a simple HTML static website using **GitHub Pages**.
+
+---
+
+## 🚀 Live Website
+[Click here to visit my website](https://praneetb2929.github.io/nodejs-elevatelabs/)  
+*(Replace `<repo-name>` with the actual repository name.)*
+
+---
+
+## 📂 Project Structure
+├── index.html # Main HTML file
+├── style.css # Optional CSS file for styling
+
+---
+
+## 📝 Steps to Deploy
+
+### 1️⃣ Create Website Files
+I created a simple `index.html` file and added optional `style.css` for styling.
+
+<img width="856" height="679" alt="Image" src="https://github.com/user-attachments/assets/d2775143-11c1-43b3-8738-ecc61c535fa0" />
+<img width="785" height="696" alt="Image" src="https://github.com/user-attachments/assets/8100c262-11ad-4fbc-912a-c0198143b429" />
+
+---
+
+### 2️⃣ Push to GitHub Repository
+I created a new GitHub repository and pushed my files.
+
+
+---
+
+### 3️⃣ Enable GitHub Pages
+1. Go to **Settings → Pages**  
+2. Under **Source**, select `Deploy from a branch`  
+3. Choose:
+   - **Branch**: `main`
+   - **Folder**: `/ (root)`
+4. Click **Save**
+
+<img width="1750" height="885" alt="Image" src="https://github.com/user-attachments/assets/3bd10aa7-ed01-408a-824e-76cf0f891ea7" />
+
+---
+
+### 4️⃣ Get Live Link
+Once saved, GitHub provides a live site link in the same **Pages** section.
+
+<img width="1917" height="624" alt="Image" src="https://github.com/user-attachments/assets/4b6f0ec3-5f0e-48ae-b95e-e9ac7cdba100" />
+
+---
+
+## 🎨 Customization
+- Added a `style.css` file for better visuals.
+- Linked it in the `<head>` section of `index.html`.
+
+---
+
+## 🛠 Tools Used
+- **GitHub Pages** (for hosting)
+- **HTML** & **CSS** (for website design)
+
+---
+
+✅ Website is live and accessible at:  
+[https://praneetb2929.github.io/<repo-name>/](https://praneetb2929.github.io/nodejs-elevatelabs/)
