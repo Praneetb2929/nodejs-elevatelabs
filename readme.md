@@ -389,3 +389,46 @@ Once saved, GitHub provides a live site link in the same **Pages** section.
 
 ✅ Website is live and accessible at:  
 [https://praneetb2929.github.io/<repo-name>/](https://praneetb2929.github.io/nodejs-elevatelabs/)
+
+
+# Task 7 – Monitor System Resources Using Netdata
+## Objective
+Install and run Netdata to visualize real-time system and application performance metrics using Docker.
+
+## 1. Installation Steps
+We installed Netdata using Docker with the following command:
+```bash
+docker run -d --name=netdata \
+  -p 19999:19999 \
+  --cap-add SYS_PTRACE \
+  --security-opt apparmor=unconfined \
+  netdata/netdata
+```
+-d → Runs in detached mode.
+--name=netdata → Container name is netdata.
+-p 19999:19999 → Maps port 19999 on host to Netdata service.
+--cap-add SYS_PTRACE & --security-opt apparmor=unconfined → Grants necessary permissions.
+Once started, Netdata can be accessed via:
+http://localhost:19999
+
+<img width="1919" height="1079" alt="Image" src="https://github.com/user-attachments/assets/08ab937f-dd19-4c93-b51e-b48ed13691fc" />
+
+## 2. Metrics Monitored
+Netdata provides real-time monitoring for:
+CPU usage (per core and total)
+RAM usage (used, free, cached, buffers)
+Disk I/O (read/write operations)
+Network traffic (upload/download per interface)
+Docker containers (CPU, memory, I/O for each container)
+System load average
+Processes and threads
+
+<img width="1095" height="966" alt="Image" src="https://github.com/user-attachments/assets/4076c86b-c47f-48d0-a0f9-6d652020dff6" />
+
+## 3. Monitor CPU, memory, disk, Docker containers
+<img width="1089" height="1020" alt="Image" src="https://github.com/user-attachments/assets/225d3815-6a9a-48e5-b19e-dc098a3147c0" />
+
+## 4. System Directories Used by Netdata
+Netdata uses specific directories for storing configs, logs, and databases:
+
+<img width="1072" height="958" alt="Image" src="https://github.com/user-attachments/assets/b27c424e-8e8b-445a-be10-b50636dcd6f3" />
