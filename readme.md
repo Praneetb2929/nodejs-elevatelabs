@@ -405,10 +405,15 @@ docker run -d --name=netdata \
   netdata/netdata
 ```
 -d → Runs in detached mode.
+
 --name=netdata → Container name is netdata.
+
 -p 19999:19999 → Maps port 19999 on host to Netdata service.
+
 --cap-add SYS_PTRACE & --security-opt apparmor=unconfined → Grants necessary permissions.
+
 Once started, Netdata can be accessed via:
+
 http://localhost:19999
 
 <img width="1919" height="1079" alt="Image" src="https://github.com/user-attachments/assets/08ab937f-dd19-4c93-b51e-b48ed13691fc" />
