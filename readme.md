@@ -470,10 +470,15 @@ Leave credentials empty if it’s a public repo.
 
 ## Step 3: Add Build Steps
 Maven Build
+
 Add Invoke top-level Maven targets.
+
 Set:
+
 Maven Version: your installed Maven version (e.g., maven new).
+
 Goals: clean install
+
 If the pom.xml is in a subdirectory, specify it using -f option:
 
 ```bash
@@ -491,22 +496,29 @@ npm test
 ## Step 4: Save and Build
 
 Click Save.
+
 Click Build Now to execute the job.
 
 
 ## 3. Metrics Monitored
 
 During the build, Jenkins monitors:
+
 SCM Checkout Time – How long it takes to pull code from Git.
+
 Build Duration – Time taken by Maven and Node.js steps.
+
 Test Results – Pass/fail status from npm test.
+
 Console Output Logs – For debugging errors.
 
 <img width="1547" height="848" alt="Image" src="https://github.com/user-attachments/assets/42460140-42c6-456b-a064-6c34a704d3a8" />
 
 
 ## 4. Example Build Output
+
 Successful Build
+
 Below is an example of a successful Maven + Node.js build:
 
 <img width="1846" height="1034" alt="Image" src="https://github.com/user-attachments/assets/d49c8e69-608b-48f6-a589-14030017d6aa" />
