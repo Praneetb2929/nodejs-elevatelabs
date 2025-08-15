@@ -437,3 +437,77 @@ Processes and threads
 Netdata uses specific directories for storing configs, logs, and databases:
 
 <img width="1072" height="958" alt="Image" src="https://github.com/user-attachments/assets/b27c424e-8e8b-445a-be10-b50636dcd6f3" />
+
+
+# TASK -8 Jenkins Pipeline for Node.js and Maven Project
+
+This project demonstrates how to set up a Jenkins freestyle job that:
+Pulls code from a GitHub repository.
+Builds a Maven project.
+Installs and tests a Node.js application.
+Shows build results in Jenkins.
+
+## 1. Prerequisites
+
+Before starting, ensure you have:
+Jenkins installed and running (localhost:8080 in this example).
+Maven installed in Jenkins (Manage Jenkins → Global Tool Configuration).
+Node.js installed in Jenkins.
+A GitHub repository containing:
+A pom.xml file (for Maven build).
+A package.json file (for Node.js dependencies and tests).
+
+## 2. Job Configuration Steps
+## Step 1: Create a New Freestyle Project
+Open Jenkins → Click "New Item" → Select Freestyle Project → Name it nodejs-elevatelabs.
+
+## Step 2: Configure Git Source
+In Source Code Management, select Git.
+Enter your repository URL (e.g., https://github.com/Praneetb2929/nodejs-elevatelabs).
+Leave credentials empty if it’s a public repo.
+
+<img width="1912" height="998" alt="Image" src="https://github.com/user-attachments/assets/e78f226f-e911-4d5b-b559-6447408e6a6d" />
+
+## Step 3: Add Build Steps
+Maven Build
+Add Invoke top-level Maven targets.
+Set:
+Maven Version: your installed Maven version (e.g., maven new).
+Goals: clean install
+If the pom.xml is in a subdirectory, specify it using -f option:
+
+```bash
+clean install -f hello-java-maven/pom.xml
+```
+Node.js Commands
+Add Execute Shell step:
+
+```bash
+npm install
+npm test
+```
+<img width="1912" height="998" alt="Image" src="https://github.com/user-attachments/assets/f5340ea9-6584-437d-b63a-b7bb93c93898" />
+
+## Step 4: Save and Build
+
+Click Save.
+Click Build Now to execute the job.
+
+
+## 3. Metrics Monitored
+
+During the build, Jenkins monitors:
+SCM Checkout Time – How long it takes to pull code from Git.
+Build Duration – Time taken by Maven and Node.js steps.
+Test Results – Pass/fail status from npm test.
+Console Output Logs – For debugging errors.
+
+<img width="1547" height="848" alt="Image" src="https://github.com/user-attachments/assets/42460140-42c6-456b-a064-6c34a704d3a8" />
+
+
+## 4. Example Build Output
+Successful Build
+Below is an example of a successful Maven + Node.js build:
+
+<img width="1846" height="1034" alt="Image" src="https://github.com/user-attachments/assets/d49c8e69-608b-48f6-a589-14030017d6aa" />
+
